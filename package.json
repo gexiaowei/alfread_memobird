@@ -1,0 +1,11 @@
+{
+  "name": "memobird-workflow",
+  "version": "1.0.0",
+  "description": "alfred workflow by using memobird g2",
+  "main": "index.js",
+  "author": "gexiaowei<gandxiaowei@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "memobird": "^0.5.2"
+  }
+}
