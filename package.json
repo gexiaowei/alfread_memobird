@@ -6,6 +6,7 @@
   "author": "gexiaowei<gandxiaowei@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "alfy": "^0.7.0",
     "memobird": "^0.5.2"
   }
 }

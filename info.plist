@@ -7,7 +7,34 @@
 	<key>category</key>
 	<string>Tools</string>
 	<key>connections</key>
-	<dict/>
+	<dict>
+		<key>9D771DEB-9475-4D71-9A4C-B0E9C1EE572C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C049FC8F-C4AA-4815-9D3F-2A3A141BD335</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C049FC8F-C4AA-4815-9D3F-2A3A141BD335</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>25A752D2-FD8F-4668-9B77-87B036BF6F22</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
 	<key>createdby</key>
 	<string>gexiaowei</string>
 	<key>description</key>
@@ -32,27 +59,27 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>memobird</string>
+				<string>memo</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
-				<false/>
+				<true/>
 				<key>queuedelaymode</key>
 				<integer>0</integer>
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string>Please Wait...</string>
+				<string>Please Wait</string>
 				<key>script</key>
-				<string>./search_code.py "{query}"</string>
+				<string>./node_modules/.bin/run-node index.js "$1"</string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>Print {query}</string>
+				<string>by using Memobird G2</string>
 				<key>title</key>
-				<string>Print {query}</string>
+				<string>Print  {query}</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -61,9 +88,53 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>0CC0EC84-6D62-4226-BBA4-819022E3766A</string>
+			<string>9D771DEB-9475-4D71-9A4C-B0E9C1EE572C</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node print.js "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>C049FC8F-C4AA-4815-9D3F-2A3A141BD335</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Memobird</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>25A752D2-FD8F-4668-9B77-87B036BF6F22</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -72,12 +143,26 @@
 Type your keyword into Alfred, followed by your input text if needed, and you'll be on your way to boosting your productivity!</string>
 	<key>uidata</key>
 	<dict>
-		<key>0CC0EC84-6D62-4226-BBA4-819022E3766A</key>
+		<key>25A752D2-FD8F-4668-9B77-87B036BF6F22</key>
 		<dict>
 			<key>xpos</key>
-			<integer>210</integer>
+			<integer>600</integer>
 			<key>ypos</key>
-			<integer>250</integer>
+			<integer>100</integer>
+		</dict>
+		<key>9D771DEB-9475-4D71-9A4C-B0E9C1EE572C</key>
+		<dict>
+			<key>xpos</key>
+			<integer>150</integer>
+			<key>ypos</key>
+			<integer>100</integer>
+		</dict>
+		<key>C049FC8F-C4AA-4815-9D3F-2A3A141BD335</key>
+		<dict>
+			<key>xpos</key>
+			<integer>400</integer>
+			<key>ypos</key>
+			<integer>100</integer>
 		</dict>
 	</dict>
 	<key>version</key>
